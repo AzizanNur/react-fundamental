@@ -6,4 +6,12 @@ function HelloWorld() {
   );
 }
 
-export default HelloWorld;
+function HeaderParagraf() {
+  return (
+    <>
+      <p>Selamat Belajar ya</p>
+    </>
+  );
+}
+
+export { HelloWorld, HeaderParagraf };
