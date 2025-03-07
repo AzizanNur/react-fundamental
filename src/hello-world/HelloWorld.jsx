@@ -1,3 +1,5 @@
+import "./HelloWorld.css";
+
 function HelloWorld() {
   const props = {
     text: "Hello World",
@@ -25,10 +27,9 @@ function Header(props) {
 
 function Paragraf() {
   const text = "SELAMAT BELAJAR";
-  const style = { color: "orange", backgroundColor: "yellow" };
   return (
     <>
-      <p style={style}>{text.toLowerCase()}</p>
+      <p className="paragraph">{text.toLowerCase()}</p>
     </>
   );
 }
