@@ -1,5 +1,7 @@
-export default function Todo({ text, isCompleted }) {
-  if (isCompleted) {
+export default function Todo({ text, isCompleted, isDeleted = false }) {
+  if (isDeleted) {
+    return null;
+  } else if (isCompleted) {
     return (
       <>
         <li>
