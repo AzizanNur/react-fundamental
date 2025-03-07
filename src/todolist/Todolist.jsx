@@ -3,24 +3,29 @@ import Todo from "./Todo";
 export default function Todolist() {
   const data = [
     {
+      id: 1,
       text: "Membaca",
       isCompleted: true,
     },
     {
+      id: 2,
       text: "Menulis",
       isCompleted: false,
     },
     {
+      id: 3,
       text: "Berhitung",
       isCompleted: true,
     },
   ];
 
-  const todos = data.map((todo) => <Todo {...todo} />);
-
   return (
     <>
-      <ul>{todos}</ul>
+      <ul>
+        {data.map((todo) => (
+          <Todo key={todo.id} {...todo} />
+        ))}
+      </ul>
     </>
   );
 }
