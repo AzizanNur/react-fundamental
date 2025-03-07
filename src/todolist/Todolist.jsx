@@ -1,14 +1,26 @@
 import Todo from "./Todo";
 
 export default function Todolist() {
+  const data = [
+    {
+      text: "Membaca",
+      isCompleted: true,
+    },
+    {
+      text: "Menulis",
+      isCompleted: false,
+    },
+    {
+      text: "Berhitung",
+      isCompleted: true,
+    },
+  ];
+
+  const todos = data.map((todo) => <Todo {...todo} />);
+
   return (
     <>
-      <ul>
-        <Todo text="Melihat Film" isCompleted={false} isDeleted={true} />
-        <Todo text="Belajar" isCompleted={false} />
-        <Todo text="Menonton TV" isCompleted={true} />
-        <Todo text="Mengaji" isCompleted={false} />
-      </ul>
+      <ul>{todos}</ul>
     </>
   );
 }
