@@ -1,7 +1,12 @@
 function HelloWorld() {
+  const props = {
+    text: "Hello World",
+    background: "red",
+    color: "blue",
+  };
   return (
     <>
-      <Header background="red" color="pink" />
+      <Header {...props} />
       <Paragraf />
     </>
   );
