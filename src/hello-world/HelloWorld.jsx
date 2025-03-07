@@ -20,11 +20,10 @@ function Header() {
 
 function Paragraf() {
   const text = "SELAMAT BELAJAR";
+  const style = { color: "orange", backgroundColor: "yellow" };
   return (
     <>
-      <p style={{ color: "orange", backgroundColor: "yellow" }}>
-        {text.toLowerCase()}
-      </p>
+      <p style={style}>{text.toLowerCase()}</p>
     </>
   );
 }
