@@ -1,17 +1,17 @@
 function HelloWorld() {
   return (
     <>
-      <Header text="Hello Ini Props Oke" />
+      <Header background="red" color="pink" />
       <Paragraf />
     </>
   );
 }
 
 function Header(props) {
-  const { text } = props;
+  const { text = "ini nilai default text", background, color } = props;
   return (
     <>
-      <h1 style={{ color: "red", backgroundColor: "aqua" }}>
+      <h1 style={{ color: color, backgroundColor: background }}>
         {text.toUpperCase()}
       </h1>
     </>
