@@ -7,7 +7,7 @@ export default function Todolist() {
         <Todo text="Melihat Film" isCompleted={false} isDeleted={true} />
         <Todo text="Belajar" isCompleted={false} />
         <Todo text="Menonton TV" isCompleted={true} />
-        <Todo text="Mengaji" isCompleted={true} />
+        <Todo text="Mengaji" isCompleted={false} />
       </ul>
     </>
   );
