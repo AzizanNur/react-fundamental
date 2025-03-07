@@ -11,7 +11,9 @@ function Header() {
   const text = "hello world";
   return (
     <>
-      <h1>{text.toUpperCase()}</h1>
+      <h1 style={{ color: "red", backgroundColor: "aqua" }}>
+        {text.toUpperCase()}
+      </h1>
     </>
   );
 }
@@ -20,7 +22,9 @@ function Paragraf() {
   const text = "SELAMAT BELAJAR";
   return (
     <>
-      <p>{text.toLowerCase()}</p>
+      <p style={{ color: "orange", backgroundColor: "yellow" }}>
+        {text.toLowerCase()}
+      </p>
     </>
   );
 }
