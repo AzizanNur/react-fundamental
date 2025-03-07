@@ -1,12 +1,21 @@
 function HelloWorld() {
   return (
     <>
+      <Header />
+      <Paragraf />
+    </>
+  );
+}
+
+function Header() {
+  return (
+    <>
       <h1>Hello World</h1>
     </>
   );
 }
 
-function HeaderParagraf() {
+function Paragraf() {
   return (
     <>
       <p>Selamat Belajar ya</p>
@@ -14,4 +23,4 @@ function HeaderParagraf() {
   );
 }
 
-export { HelloWorld, HeaderParagraf };
+export default HelloWorld;
