@@ -1,18 +1,17 @@
 function HelloWorld() {
   return (
     <>
-      <Header />
+      <Header text="Hello Ini Props" />
       <Paragraf />
     </>
   );
 }
 
-function Header() {
-  const text = "hello world";
+function Header(props) {
   return (
     <>
       <h1 style={{ color: "red", backgroundColor: "aqua" }}>
-        {text.toUpperCase()}
+        {props.text.toUpperCase()}
       </h1>
     </>
   );
