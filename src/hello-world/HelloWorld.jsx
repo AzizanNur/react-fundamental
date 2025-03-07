@@ -8,17 +8,19 @@ function HelloWorld() {
 }
 
 function Header() {
+  const text = "hello world";
   return (
     <>
-      <h1>Hello World</h1>
+      <h1>{text.toUpperCase()}</h1>
     </>
   );
 }
 
 function Paragraf() {
+  const text = "SELAMAT BELAJAR";
   return (
     <>
-      <p>Selamat Belajar ya</p>
+      <p>{text.toLowerCase()}</p>
     </>
   );
 }
