@@ -1,6 +1,6 @@
-export default function AlertButton({ text }) {
+export default function AlertButton({ text, message }) {
   const handleAlert = () => {
-    alert("halo ini button");
+    alert(message);
   };
   return <button onClick={handleAlert}>{text}</button>;
 }

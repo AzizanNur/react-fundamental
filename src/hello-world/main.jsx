@@ -10,7 +10,7 @@ createRoot(document.getElementById("root")).render(
     <Container>
       <HelloWorld />
       <Todolist />
-      <AlertButton text="Klik Oke Lah" />
+      <AlertButton text="Klik Oke Lah" message="Alhamdulillah" />
     </Container>
   </StrictMode>
 );
