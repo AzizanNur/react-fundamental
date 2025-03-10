@@ -10,6 +10,7 @@ export default defineConfig({
         index: "index.html",
         hellow_world: "index-hello.html",
         contact: "contact.html",
+        task: "task.html",
       },
     },
   },
