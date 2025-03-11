@@ -1,6 +1,6 @@
+import { useImmerReducer } from "use-immer";
 import NoteForm from "./NoteForm";
 import NoteList from "./Notelist";
-import { useReducer } from "react";
 
 let id = 1;
 const initialNotes = [
@@ -10,29 +10,30 @@ const initialNotes = [
   { id: id++, text: "Learn React", done: false },
 ];
 export default function NoteApp() {
-  const [notes, dispacth] = useReducer(notesRecuder, initialNotes);
+  const [notes, dispacth] = useImmerReducer(notesRecuder, initialNotes);
 
   function notesRecuder(notes, action) {
     switch (action.type) {
       case "ADD_NOTE":
-        return [
-          ...notes,
-          {
-            id: id++,
-            text: action.text,
-            done: false,
-          },
-        ];
+        notes.push({
+          id: id++,
+          text: action.text,
+          done: false,
+        });
+        break;
+
       case "CHANGE_NOTE":
-        return notes.map((note) =>
-          note.id === action.id
-            ? { ...notes, text: action.text, done: action.done }
-            : note
-        );
+        const index = notes.findIndex((note) => note.id === action.id);
+        notes[index].text = action.text;
+        notes[index].done = action.done;
+        break;
       case "DELETE_NOTE":
-        return notes.filter((note) => note.id !== action.id);
+        const indexDel = notes.findIndex((note) => note.id === action.id);
+        notes.splice(indexDel, 1);
+        break;
       default:
         return notes;
+        break;
     }
   }
 
