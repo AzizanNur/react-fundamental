@@ -11,6 +11,7 @@ export default defineConfig({
         hellow_world: "index-hello.html",
         contact: "contact.html",
         task: "task.html",
+        note: "note.html",
       },
     },
   },
