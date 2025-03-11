@@ -13,6 +13,7 @@ export default defineConfig({
         task: "task.html",
         note: "note.html",
         profile: "profile.html",
+        timer: "timer.html",
       },
     },
   },
