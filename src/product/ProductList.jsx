@@ -2,9 +2,10 @@ import { useEffect } from "react";
 import { useRef } from "react";
 import { useState } from "react";
 import Product from "./Product";
+import { useImmer } from "use-immer";
 
 export default function ProductList() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useImmer([]);
   const loaded = useRef(false);
 
   useEffect(() => {
