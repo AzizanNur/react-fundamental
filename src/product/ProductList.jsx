@@ -14,20 +14,15 @@ export default function ProductList() {
   }
 
   useEffect(() => {
-    console.info("call use effect");
-    if (load) {
-      fetch("/products.json")
-        .then((response) => response.json())
-        .then((data) => {
-          setProducts(data);
-          loaded.current = true;
-        });
+    async function fetchProduct() {
+      const response = await fetch("/products.json");
+      const data = await response.json();
+      setProducts(data);
     }
 
-    //this using clean up, ex. when finish open socket the fist step so this is run to close the socket when component is remove
-    return () => {
-      console.info("Product List Component Unmounted");
-    };
+    if (load) {
+      fetchProduct();
+    }
   }, [load]);
 
   return (
