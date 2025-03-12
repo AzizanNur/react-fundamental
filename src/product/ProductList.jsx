@@ -17,6 +17,11 @@ export default function ProductList() {
           loaded.current = true;
         });
     }
+
+    //this using clean up, ex. when finish open socket the fist step so this is run to close the socket when component is remove
+    return () => {
+      console.info("Product List Component Unmounted");
+    };
   });
 
   return (
